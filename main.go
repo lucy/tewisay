@@ -248,12 +248,12 @@ func main() {
 	args := flag.Args()
 	var lines []string
 	if len(args) != 0 {
-		lines = strings.Split(strings.Join(args, " "), "\n")
+		lines = strings.Split(strings.Replace(strings.Join(args, " "),"\t", "   ", -1), "\n")
 	} else {
 		b, err := ioutil.ReadAll(os.Stdin)
 		handle(err)
 		b = bytes.TrimSuffix(b, []byte("\n"))
-		lines = strings.Split(string(b), "\n")
+		lines = strings.Split(strings.Replace(string(b), "\t", "   ", -1), "\n")
 	}
 
 	w := &bytes.Buffer{}
