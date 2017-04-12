@@ -1,8 +1,12 @@
 # Installation Instructions
 
+```
 mkdir ~/.go
+
 export GOPATH=~/.go
+
 go get github.com/lucy/tewisay
+```
 
 Features
 --------
