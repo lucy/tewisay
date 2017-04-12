@@ -10,7 +10,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/lucy/runewidth"
+	"github.com/mattn/go-runewidth"
 	flag "github.com/ogier/pflag"
 )
 
